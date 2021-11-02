@@ -1,0 +1,33 @@
+import {
+  BadgeCheckIcon,
+  CollectionIcon,
+  HomeIcon,
+  LightBulbIcon,
+  SearchIcon,
+  UserIcon,
+} from "@heroicons/react/outline";
+import Image from "next/image";
+import HeaderItem from "./HeaderItem";
+
+function Header() {
+  return (
+    <header className="flex flex-col md:flex-row m-5 justify-between items-center h-auto">
+      <div className="flex flex-grow justify-evenly max-w-2xl">
+        <HeaderItem title="HOME" Icon={HomeIcon} />
+        <HeaderItem title="TRENDING" Icon={LightBulbIcon} />
+        <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
+        <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
+        <HeaderItem title="SEARCH" Icon={SearchIcon} />
+        <HeaderItem title="ACCOUNT" Icon={UserIcon} />
+      </div>
+      <Image
+        className="object-contain"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hulu_Logo.svg/1200px-Hulu_Logo.svg.png"
+        width={100}
+        height={50}
+      />
+    </header>
+  );
+}
+
+export default Header;
